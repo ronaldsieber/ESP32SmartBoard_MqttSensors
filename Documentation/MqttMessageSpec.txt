@@ -1,0 +1,57 @@
+
+
+
+    ---- SUPERVISOR ----
+
+    Supervisor          ---->   Topic="SmBrd_Supervisor"                            Payload="CI=<ClientId>, IP=<LocalIP>, ST=[Connected|GotLost]"
+
+
+
+
+
+    ---- PUBLISH ----
+
+    Button KEY0         ---->   Topic="SmBrd/<DevID>/InData/Key0"                   Payload=[0|1]           0 = off
+                                                                                                            1 = on
+
+    Button KEY1         ---->   Topic="SmBrd/<DevID>/InData/Key1"                   Payload=[0|1]           0 = off
+                                                                                                            1 = on
+
+    Temperature         ---->   Topic="SmBrd/<DevID>/InData/Temperature"            Payload=<Temperature>
+
+    Humidity            ---->   Topic="SmBrd/<DevID>/InData/Humidity"               Payload=<Humidity>
+
+    CO2 Level           ---->   Topic="SmBrd/<DevID>/InData/CO2"                    Payload=<CO2Val>
+
+    SensTemp            ---->   Topic="SmBrd/<DevID>/InData/SensTemp"               Payload=<SensTemp>
+
+
+
+
+
+    ---- SUBSCRIBE ----
+
+    SystemHeartbeat     <----   Topic="SmBrd/<DevID>/Settings/Heartbeat"            Payload=[0|1]           0 = off
+                                                                                                            1 = on
+
+    LedBarIndicator     <----   Topic="SmBrd/<DevID>/Settings/LedBarIndicator"      Payload=[0|1|2|3]       0 = kLedBarNone
+                                                                                                            1 = kLedBarDht22Temperature
+                                                                                                            2 = kLedBarDht22Humidity
+                                                                                                            3 = kLedBarMhz19Co2Level
+
+    PrintSensorValue    <----   Topic="SmBrd/<DevID>/Settings/PrintSensorVal"       Payload=[0|1]           0 = off
+                                                                                                            1 = on
+
+    PrintMqttDataProc   <----   Topic="SmBrd/<DevID>/Settings/PrintMqttDataProc"    Payload=[0|1]           0 = off
+                                                                                                            1 = on
+
+    LedBar (normal)     <----   Topic="SmBrd/<DevID>/OutData/LedBar"                Payload=[0-9]           LedBarValue
+
+    LedBar (invers)     <----   Topic="SmBrd/<DevID>/OutData/LedBarInv"             Payload=[0-9]           LedBarValue
+
+    SingleLed           <----   Topic="SmBrd/<DevID>/OutData/Led"                   Payload=[0-9]=[0|1]     LedNum, 0 = off
+                                                                                                            LedNum, 1 = on
+
+
+
+
