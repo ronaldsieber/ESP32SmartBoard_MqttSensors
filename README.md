@@ -22,6 +22,8 @@ In a typical scenario, several *ESP32SmartBoards* are installed in different roo
 
 The *ESP32SmartBoard_MqttSensors* project only contains the MQTT-based firmware for the *ESP32SmartBoard* from the setup described. Broker, database, dashboards etc. are not part of this project.
 
+In addition to this Arduino project, [ESP32SmartBoard_NodeRED](https://github.com/ronaldsieber/ESP32SmartBoard_NodeRED) implements a Node-RED based dashboard to display the sensor data and for the runtime configuration of the board.
+
 The open source tool 'MQTT Explorer' (https://mqtt-explorer.com/) is very suitable for commissioning and diagnosis.
 
 ## WLAN Configuration Section
