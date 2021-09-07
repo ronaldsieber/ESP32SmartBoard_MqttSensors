@@ -1,4 +1,4 @@
-# ESP32SmartBoard_MqttSensors
+﻿# ESP32SmartBoard_MqttSensors
 
 This Arduino project enables the *ESP32SmartBoard* (see hardware project [ESP32SmartBoard_PCB](https://github.com/ronaldsieber/ESP32SmartBoard_PCB)) to communicate with an MQTT broker. The values of the temperature and humidity sensor (DHT22), the CO2 sensor (MH-Z19) and the other peripherals of the board are sent as MQTT messages. Incoming MQTT messages can be used to set outputs and to configure the board.
 
@@ -11,6 +11,8 @@ Part of an overall system made up of several *ESP32SmartBoards*, each board publ
  - Alternative - **ESP32SmartBoard_HttpSensors**:
 Easy to use, clear display of current sensor values
 Stand-alone solution with Embedded WebServer, presentation of the current sensor values via HTTP pages in real time, direct access to the *ESP32SmartBoard* from devices such as PCs, laptop, tablet or smartphone
+
+**Note:** The [ESP32SmartBoard_MqttSensors_BleCfg](https://github.com/ronaldsieber/ESP32SmartBoard_MqttSensors_BleCfg) project is an extended version of this Arduino project in which the runtime configuration is implemented using the Bluetooth Configuration Framework. This eliminates manual adjustments in the source code as described below for this project (WLAN configuration, MQTT configuration, application configuration). These configuration settings are made there via Bluetooth using the graphical configuration tool.
 
 ## Project Overview
 
